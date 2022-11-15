@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>React Hello World</title>
+  </head>
+  <body>
+    <div id="react-app"></div>
+    <div id="vanila-app"></div>
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script>
+      //peredaiem 3 komponente: 1-element , 2-opcii/svoistva(null), 3- chto budit vnutri elementa(text)
+      const helloWordlHeading = React.createElement(
+        'h2',
+        null,
+        'Hellow from React'
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById('react-app'));
+      root.render(helloWordlHeading);
+    </script>
+
+    <script>
+      const heading = document.createElement('h1');
+      heading.textContent = 'Hello from vanila js';
+      document.getElementById('vanila-app').appendChild(heading);
+    </script>
+  </body>
+</html>
