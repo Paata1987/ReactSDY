@@ -1,0 +1,19 @@
+import "./App.css";
+import PetInfo from "./Components/PetInfo";
+
+function App() {
+  return (
+    <div className="App">
+      <PetInfo
+        animal="cat"
+        age="5"
+      />
+      <PetInfo
+        animal="dog"
+        age="3"
+      />
+    </div>
+  );
+}
+
+export default App;
