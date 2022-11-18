@@ -21,3 +21,25 @@ button:hover {
   color: white;
   transform: scale(1.1, 1.1);
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  width: 250px;
+  border: 1px;
+  color: lightgray solid;
+  border-radius: 10px;
+  margin: 15px;
+  padding-bottom: 10px;
+  background-color: rgb(67, 76, 102);
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 10px;
+}

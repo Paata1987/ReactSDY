@@ -1,9 +1,8 @@
-import Person from "./Person";
-import Person from "./Components/Person";
-import personsData from "./Data/persons";
+import Person from "../Components/Person";
+import personsData from "../Data/persons";
 function Persons() {
   return (
-    <div>
+    <div className="cards">
       {personsData.map((personVar) => {
         return (
           <Person
