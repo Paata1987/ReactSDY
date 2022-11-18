@@ -14,11 +14,12 @@ function App() {
   return (
     <div className="App">
       <Counter count={count} />
-      {text.map((varText) => {
+      {text.map((varText, index) => {
         return (
           <Button
             onClick={incrementCount}
             text={varText}
+            key={index}
           />
         );
       })}
