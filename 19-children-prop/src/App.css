@@ -14,7 +14,13 @@ button {
   cursor: pointer;
   transition-duration: 0.4s;
 }
-
+input {
+  text-align: center;
+  background: rgb(221, 135, 135);
+  width: auto;
+  height: 60px;
+  margin: auto;
+}
 button:hover {
   background-color: #4caf50; /* Green */
   color: white;
