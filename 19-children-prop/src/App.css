@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+h1 {
+  font-size: 70px;
+  margin-top: 20px;
+}
+button {
+  padding: 15px;
+  font-size: 30px;
+  border-radius: 5px;
+  margin: 20px;
+  border: 0;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+  transform: scale(1.1, 1.1);
+}
