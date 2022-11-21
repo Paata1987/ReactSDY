@@ -9,7 +9,6 @@ function App() {
     setCount(count + 1);
     console.log(count);
   };
-  w;
 
   const resetCount = () => {
     setCount(0);
@@ -23,14 +22,16 @@ function App() {
       <Button onClick={incrementCount} />
       <Button onClick={incrementCount} />
       <Button onClick={incrementCount} />
-      <div>
-        <button
-          style={buttonStyle}
-          onClick={resetCount}
-        >
-          reset
-        </button>
-      </div>
+      {count > 0 && (
+        <div>
+          <button
+            style={buttonStyle}
+            onClick={resetCount}
+          >
+            reset
+          </button>
+        </div>
+      )}
     </div>
   );
 }
