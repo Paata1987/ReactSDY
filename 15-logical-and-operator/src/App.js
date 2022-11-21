@@ -9,6 +9,7 @@ function App() {
     setCount(count + 1);
     console.log(count);
   };
+  w;
 
   const resetCount = () => {
     setCount(0);
