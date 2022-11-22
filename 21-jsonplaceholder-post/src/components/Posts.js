@@ -6,27 +6,21 @@ function Posts() {
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => res.json())
-      .then((allposts) => {
-        console.log(allposts);
-        setPosts(allposts);
+      .then((response) => response.json())
+      .then((posts) => {
+        setPosts(posts);
       })
-      .catch((err) => console.log(err.message));
+      .catch((error) => console.log(error.message));
   }, []);
 
-  /* useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => setPosts(json));
-  }); */
   return (
     <div>
-      {posts && (
-        <div>
-          <Post />
-          <Post />
-        </div>
-      )}
+      {posts.map((ps) => (
+        <Post
+          {...ps}
+          key={ps.id}
+        />
+      ))}
     </div>
   );
 }

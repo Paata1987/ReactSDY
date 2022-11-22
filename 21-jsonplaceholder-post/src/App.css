@@ -17,6 +17,6 @@ button {
 
 button:hover {
   background-color: #4caf50; /* Green */
-  color: white;
+  color: rgb(163, 50, 50);
   transform: scale(1.1, 1.1);
 }

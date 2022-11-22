@@ -4,8 +4,9 @@
 }
 
 body {
+  width: 100%;
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  color: aliceblue;
-  background-color: #112d49;
+
+  background-color: #fcfcfc;
 }
