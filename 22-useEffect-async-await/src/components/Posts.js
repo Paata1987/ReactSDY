@@ -26,8 +26,12 @@ function Posts() {
   /*
 
   //IIFE => imidiatly invoke function expression
+  //______________________________________________________________
+  //version1:
+
   useEffect(() => {
-    (async function() {
+    //IIFE- arrow func
+    (const fetchData = async () => {
       try {
         const res = await fetch(API_URL);
         const post = await res.json();
@@ -39,9 +43,26 @@ function Posts() {
     })()
     
   }, []);
+  //______________________________________________________________
+  //version2:
+
+  useEffect(() => {
+    //IIFE- standartFun
+    (async function() {
+      try {
+        const res = await fetch(API_URL);
+        const post = await res.json();
+        setPosts(post);
+      } catch (error) {
+        setError(error.message);
+      }
+      setIsLoading(false);
+    })()
+
+  }, []);
   
   */
-
+  //______________________________________________________________
   /*  useEffect(async () => {
     try {
       const res = await fetch(API_URL);
@@ -52,7 +73,7 @@ function Posts() {
     }
     setIsLoading(false);
   }, []); */
-
+  //______________________________________________________________
   /* useEffect(() => {
     fetch(API_URL)
       .then((response) => response.json())
@@ -64,6 +85,7 @@ function Posts() {
         setIsLoading(false);
       });
   }, []); */
+  //______________________________________________________________
   //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 
   if (error) {
