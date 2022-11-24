@@ -6,11 +6,14 @@ function Todo(props) {
   return (
     <div
       className={styles.todo}
-      onDoubleClick={() => deleteTodo(todo.id)}
+      //onDoubleClick={() => deleteTodo(todo.id)}
     >
       <RiTodoFill className={styles.todoIcon} />
       <div className={styles.todoText}> {todo.text} </div>
-      <RiDeleteBin2Line className={styles.deleteIcon} />
+      <RiDeleteBin2Line
+        className={styles.deleteIcon}
+        onClick={() => deleteTodo(todo.id)}
+      />
       <FaCheck className={styles.checkIcon} />
     </div>
   );
