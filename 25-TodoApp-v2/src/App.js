@@ -33,16 +33,40 @@ function App() {
     );
   };
 
+  //clear application state
+  const resetTodoHandler = () => {
+    setTodos([]);
+  };
+
+  const deleteCoplitedTodosHandler = () => {
+    setTodos(todos.filter((todo) => !todo.isCompleted));
+  };
+
+  const complitedTodosCount = todos.filter((todo) => todo.isCompleted).length;
+  //console.log(!!complitedTodosCount);
+
   return (
     <div className="App">
       <h1>Todo App</h1>
       <TodoForms addTodo={addTodoHandler} />
-      <TodoActions />
+      {todos.length > 0 && (
+        <TodoActions
+          complitedtTodosExist={!!complitedTodosCount}
+          resetTodos={resetTodoHandler}
+          deleteComplitedtTodos={deleteCoplitedTodosHandler}
+        />
+      )}
+
       <TodoList
         todos={todos}
         deleteTodo={deleteTodoHandler}
         toggleTodo={toggleTodoHandler}
       />
+      {complitedTodosCount > 0 && (
+        <h2>{`you have completed ${complitedTodosCount} ${
+          complitedTodosCount > 1 ? "todos" : "todo"
+        }`}</h2>
+      )}
     </div>
   );
 }
