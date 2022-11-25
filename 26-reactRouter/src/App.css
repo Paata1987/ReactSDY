@@ -36,7 +36,7 @@ nav {
   padding: 15px;
 }
 
-.active {
+.activeLink {
   color: lightyellow;
   text-decoration: none;
 }
