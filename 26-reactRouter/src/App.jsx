@@ -5,6 +5,8 @@ import About from "./components/About";
 import NotFound from "./components/NotFound";
 import Contacts from "./components/Contacts";
 import MainLayOut from "./layOuts/MainLayOut";
+import Courses from "./components/Courses";
+import SingleCourse from "./components/SingleCourse";
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +24,15 @@ function App() {
               path="home"
               element={<Home />}
             />
+            <Route
+              path="courses"
+              element={<Courses />}
+            />
+            <Route
+              path="courses/:courseSlug"
+              element={<SingleCourse />}
+            />
+
             <Route
               path="about"
               element={<About />}
