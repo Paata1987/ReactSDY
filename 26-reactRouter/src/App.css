@@ -35,3 +35,8 @@ nav {
   background-color: darkslategray;
   padding: 15px;
 }
+
+.active {
+  color: lightyellow;
+  text-decoration: none;
+}
