@@ -21,3 +21,17 @@ button:hover {
   color: white;
   transform: scale(1.1, 1.1);
 }
+
+a {
+  color: lightblue;
+  font-size: 35px;
+}
+
+nav a {
+  margin: 15px;
+}
+
+nav {
+  background-color: darkslategray;
+  padding: 15px;
+}
