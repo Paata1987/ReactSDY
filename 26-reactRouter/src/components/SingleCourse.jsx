@@ -1,8 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import courses from "../data/Courses";
+import NotFound from "./NotFound";
 const SingleCourse = () => {
   const params = useParams();
   const course = courses.find((course) => course.slug === params.courseSlug);
+  if (!course) {
+    return <NotFound />;
+  }
+
   return (
     <div>
       <h1>{course.title}</h1>
